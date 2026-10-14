@@ -26,7 +26,7 @@ def iniciar_sesion():
         messagebox.showerror("Error", "Usuario o contraseña incorrectos")
 
 
-# ---------- LOGIN ----------
+# Login
 ctk.CTkLabel(frame_login, text="🐾 Adopt Me", font=("Arial", 24, "bold"), text_color="#245743").pack(pady=30)
 entry_user = ctk.CTkEntry(frame_login, placeholder_text="Tu usuario", width=250)
 entry_user.pack(pady=10)
@@ -36,10 +36,10 @@ ctk.CTkButton(frame_login, text="Iniciar sesión →", command=iniciar_sesion, w
 frame_login.pack(fill="both", expand=True)
 
 
-# ---------- PANEL ----------
+#Panel
 def construir_panel(usuario):
 
-    # ===== EMPLEADOS =====
+    #Empleados 
     ctk.CTkLabel(frame_panel, text="🐾 Directorio de Empleados", font=("Arial", 20, "bold"), text_color="#245743").pack(pady=10)
 
     columnas = ("ID", "Usuario", "Nombre", "Correo", "Teléfono", "CURP", "Dirección")
@@ -85,7 +85,7 @@ def construir_panel(usuario):
                 entradas[campo] = entrada
 
             if datos:
-                entradas["Usuario"].configure(state="disabled")  # el usuario no se cambia
+                entradas["Usuario"].configure(state="disabled") # el usuario no se cambia
                 ctk.CTkLabel(ventana, text="(Contraseña vacía = no se cambia)", text_color="gray").pack()
 
             ctk.CTkLabel(ventana, text="Rol").pack(pady=(8, 0))
@@ -151,7 +151,7 @@ def construir_panel(usuario):
         ctk.CTkButton(frame_botones, text="✎ Editar", command=btn_editar, fg_color="#36785c").pack(side="left", padx=10)
         ctk.CTkButton(frame_botones, text="🗑 Eliminar", command=btn_eliminar, fg_color="#c84b48").pack(side="left", padx=10)
 
-    # ===== ANIMALES =====
+    #Animales
     ctk.CTkLabel(frame_panel, text="🐶 Animales del Refugio", font=("Arial", 20, "bold"), text_color="#245743").pack(pady=10)
 
     col_anim = ("ID", "Nombre", "Especie", "Sexo", "Edad (meses)", "Tamaño", "Estado", "Descripción")
